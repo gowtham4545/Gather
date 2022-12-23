@@ -1,9 +1,11 @@
 import React from 'react';
 import img1 from './pexels-fauxels-3183183.jpg';
 import img2 from './pexels-fauxels-3184287.jpg';
-import { Box, Button, Image, Link, Text } from '@chakra-ui/react'
+import { Box, Button, Image,  Text } from '@chakra-ui/react'
 import { Container } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
+import { Link } from 'react-router-dom';
+// import { Link as Rlink } from '@reach/router'
 
 export default function Home() {
     return (
@@ -17,7 +19,11 @@ export default function Home() {
             <Container top={'20vh'} minW={'container.xl'} zIndex={2} position='absolute' left={'10'} >
                 <Text className='font-sans title' textShadow={'1px 1px #ffffff'} fontSize='8xl' color={'aliceblue'} >Let's Gather</Text>
                 <Text className='font-sans title' fontFamily={'mono'} textShadow={'1px 1px #ffffff'} fontSize='3xl' color={'aliceblue'} >One platform to connect</Text>
-                <Button  colorScheme='whiteAlpha' position='relative' left='32' top='5' rightIcon={<ArrowForwardIcon />} variant='outline' size='md' color={'aliceblue'}><Link href='./login'>Log In</Link></Button>
+                <Link to='/login' relative='path' preventScrollReset={true} >
+                    <Button colorScheme='whiteAlpha' position='relative' left='32' top='5' rightIcon={<ArrowForwardIcon />} variant='outline' size='md' color={'aliceblue'}>
+                        Log In 
+                    </Button>
+                </Link>
             </Container>
 
         </div>
