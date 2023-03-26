@@ -1,16 +1,15 @@
 import './App.css';
 import Home from './Components/Home.js';
 import {  Route, Routes } from 'react-router-dom';
-import Login from './Components/Login';
 import Stream from './Components/Stream';
+import Call from './Components/Call';
 
 function App() {
     return (
         <div className='App'>
             <Routes>
                 <Route path='/' element={<Home/>}/>
-                <Route path='/login' element={<Login/>}/>
-                {/* <Route path='/stream' element={<Stream/>}/> */}
+                {/* <Route path='/stream' element={<Call/>}/> */}
             </Routes>
         </div>
     );
