@@ -1,0 +1,24 @@
+.App {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.screen {
+    /* animation: back 6s linear infinite; */
+    height: 100vh;
+    width: 100vw;
+    margin: 0; 
+    padding:0; 
+    display:'flex';
+    padding-top: 1%;
+    align-items:'center'; 
+    justify-content:'center';
+    justify-items: center;
+    background: radial-gradient(circle at 10% 107%,#000 0%,#061633,#291724,#000);
+}
+
+video{
+    margin: 10px;
+    padding: 10px;
+}

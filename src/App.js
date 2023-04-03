@@ -1,8 +1,8 @@
 import './App.css';
 import Home from './Components/Home.js';
 import {  Route, Routes } from 'react-router-dom';
-import Stream from './Components/Stream';
 import Call from './Components/Call';
+import Screen from './Components/Screen';
 
 function App() {
     return (
@@ -10,6 +10,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 {/* <Route path='/stream' element={<Call/>}/> */}
+                <Route path='/stream' element={<Screen/>}/>
             </Routes>
         </div>
     );
