@@ -2,22 +2,25 @@ import { Container, Text } from '@chakra-ui/react';
 import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import VideoPlayer from './VideoPlayer';
+import axios from 'axios';
+// import AgoraRTC from "./Abc"
 
 
 function Screen() {
     // let tracks=window.navigator.mediaDevices.getUserMedia({video:true,audio:true}).then(MediaStream=>{return MediaStream.getTracks()}).then(tracks=>tracks)
-    const config = {
-        mode: "rtc", codec: "vp8",
-    };
-    const appId = "4f5f1bf38e0c440f86d3b1df203195c8";
-    const USER_ID = Math.floor(Math.random() * 1000000001);
-
     const { search } = useLocation();
     const params = React.useMemo(() => new window.URLSearchParams(search), [search]);
 
     const channel = params.get('channelName');
     let token = params.get('token');
     token = token.replace('_', '/');
+    const config = {
+        mode: "rtc", codec: "vp8",
+    };
+    const appId = "4f5f1bf38e0c440f86d3b1df203195c8";
+    const USER_ID = Math.floor(Math.random() * 1000000001);
+    // const client=AgoraRTC.createClient(config);
+    
 
     const [srcObject,setSourceObject]=useState();
 
@@ -35,7 +38,7 @@ function Screen() {
                 <VideoPlayer />
                 <VideoPlayer />
                 <Container maxW={'container.lg'}>
-                    {token}
+                    {/* {token} */}
                     {/* {tracks} */}
                 </Container>
             </Container>
